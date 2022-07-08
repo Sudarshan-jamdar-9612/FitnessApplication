@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    background: #000000d0;
+    }
+    #header ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #header ul li{
+        list-style: none;
+        margin-left: 20px;
+    }
+    #header ul li ul li{
+        float: none;
+    }
+    #header ul li a{
+        text-decoration: none;
+        padding: 6px 15px;
+        color: #094b65;
+        border-radius: 20px;
+    }
+    #header ul li a:hover,
+    #header ul li a.active{
+        background-color: #094b65;
+        color: white;
+    }
+body {
+    padding-top: 10em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://source.unsplash.com/1600x900/?sky');
+}
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    height: 100%;
+    max-height: 350px;
+  }
+  .search{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  }
+  input.search-bar
+  {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: inherit;
+      font-size: 120%;
+      border-radius: 24px;
+      border: none;
+      outline: none;
+      background: #7c7c7c2b;
+      width: calc(100% - 100px);
+      padding: 0.5em 1em;
+  }
+  button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 50px;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  button:hover{
+      background: #7c7c7c6b;
+      transition: 0.2s ease-in-out;
+  }
+  h1.temp{
+      margin: 0;
+  }
+  .flex{
+      display: flex;
+      align-items: center;
+  }
+  .description {
+    text-transform: capitalize;
+  }
+  .icon {
+	height: 4em;
+	width: 4em;
+}
+.weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+.weather.loading::after{
+    visibility: visible;
+    content: "loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
